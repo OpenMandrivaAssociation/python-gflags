@@ -1,14 +1,13 @@
 %define module gflags
 
 Name:           python-%{module}
-Version:        1.4
-Release:        %mkrel 1
+Version:        2.0
+Release:        1
 Summary:        Commandline flags module for Python
 Group:          Development/Python
 License:        BSD
 URL:            http://code.google.com/p/python-gflags/
 Source0:        http://python-gflags.googlecode.com/files/python-gflags-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:  python-devel
 BuildRequires:  python-distribute
 Buildarch:	noarch
@@ -35,16 +34,12 @@ sed -i '/^#!\/usr\/bin\/env python$/,+1 d' %{module}.py
 CFLAGS="%{optflags}" python setup.py build
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %{__python} setup.py install --root $RPM_BUILD_ROOT --install-purelib=%{python_sitelib}
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root,-)
 %doc AUTHORS ChangeLog COPYING README PKG-INFO 
 %{python_sitelib}/%{module}.py*
 %{python_sitelib}/python_gflags-%{version}-*egg-info
+%{python_sitelib}/gflags_validators.py
 %{_bindir}/gflags2man.py
 
