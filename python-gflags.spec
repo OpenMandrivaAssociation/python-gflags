@@ -43,3 +43,14 @@ CFLAGS="%{optflags}" python setup.py build
 %{python_sitelib}/gflags_validators.py
 %{_bindir}/gflags2man.py
 
+
+
+%changelog
+* Thu Feb 16 2012 Alexander Khrukin <akhrukin@mandriva.org> 2.0-1
++ Revision: 775472
+- version update 2.0
+
+* Wed Jun 08 2011 Antoine Ginies <aginies@mandriva.com> 1.4-1
++ Revision: 683248
+- import python-gflags
+
