@@ -2,7 +2,7 @@
 
 Name:           python-%{module}
 Version:        2.0
-Release:        1
+Release:        2
 Summary:        Commandline flags module for Python
 Group:          Development/Python
 License:        BSD
