@@ -6,7 +6,7 @@ Release:        2
 Summary:        Commandline flags module for Python
 Group:          Development/Python
 License:        BSD
-URL:            http://code.google.com/p/python-gflags/
+URL:            https://code.google.com/p/python-gflags/
 Source0:        http://python-gflags.googlecode.com/files/python-gflags-%{version}.tar.gz
 BuildRequires:  python-devel
 BuildRequires:  python-distribute
